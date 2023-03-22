@@ -6,5 +6,10 @@ namespace Fentress_MyFS
         {
             InitializeComponent();
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            btnAdd.Enabled = !btnAdd.Enabled;
+        }
     }
 }

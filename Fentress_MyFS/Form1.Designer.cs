@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelFileName = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtFileName = new System.Windows.Forms.TextBox();
+            this.chckHidden = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.chckReadOnly = new System.Windows.Forms.CheckBox();
+            this.labelFileSize = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
+            this.btnAdd.Enabled = false;
             this.btnAdd.Location = new System.Drawing.Point(442, 24);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(99, 23);
@@ -49,14 +50,14 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // labelFileName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.labelFileName.AutoSize = true;
+            this.labelFileName.Location = new System.Drawing.Point(17, 28);
+            this.labelFileName.Name = "labelFileName";
+            this.labelFileName.Size = new System.Drawing.Size(60, 15);
+            this.labelFileName.TabIndex = 1;
+            this.labelFileName.Text = "File Name";
             // 
             // listBox1
             // 
@@ -67,22 +68,22 @@
             this.listBox1.Size = new System.Drawing.Size(201, 424);
             this.listBox1.TabIndex = 2;
             // 
-            // textBox1
+            // txtFileName
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 3;
+            this.txtFileName.Location = new System.Drawing.Point(17, 50);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(100, 23);
+            this.txtFileName.TabIndex = 3;
             // 
-            // checkBox1
+            // chckHidden
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(289, 32);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(83, 19);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chckHidden.AutoSize = true;
+            this.chckHidden.Location = new System.Drawing.Point(289, 32);
+            this.chckHidden.Name = "chckHidden";
+            this.chckHidden.Size = new System.Drawing.Size(65, 19);
+            this.chckHidden.TabIndex = 4;
+            this.chckHidden.Text = "Hidden";
+            this.chckHidden.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -108,40 +109,41 @@
             this.btnRemove.TabIndex = 7;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
-            // checkBox2
+            // chckReadOnly
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(289, 68);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(83, 19);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chckReadOnly.AutoSize = true;
+            this.chckReadOnly.Location = new System.Drawing.Point(289, 68);
+            this.chckReadOnly.Name = "chckReadOnly";
+            this.chckReadOnly.Size = new System.Drawing.Size(80, 19);
+            this.chckReadOnly.TabIndex = 8;
+            this.chckReadOnly.Text = "Read Only";
+            this.chckReadOnly.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // labelFileSize
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(146, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
+            this.labelFileSize.AutoSize = true;
+            this.labelFileSize.Location = new System.Drawing.Point(146, 28);
+            this.labelFileSize.Name = "labelFileSize";
+            this.labelFileSize.Size = new System.Drawing.Size(48, 15);
+            this.labelFileSize.TabIndex = 9;
+            this.labelFileSize.Text = "File Size";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.labelFileSize);
+            this.Controls.Add(this.chckReadOnly);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.chckHidden);
+            this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelFileName);
             this.Controls.Add(this.btnAdd);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -153,14 +155,14 @@
         #endregion
 
         private Button btnAdd;
-        private Label label1;
+        private Label labelFileName;
         private ListBox listBox1;
-        private TextBox textBox1;
-        private CheckBox checkBox1;
+        private TextBox txtFileName;
+        private CheckBox chckHidden;
         private TextBox textBox2;
         private Button btnExit;
         private Button btnRemove;
-        private CheckBox checkBox2;
-        private Label label2;
+        private CheckBox chckReadOnly;
+        private Label labelFileSize;
     }
 }
